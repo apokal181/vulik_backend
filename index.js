@@ -28,7 +28,7 @@ app.use(errorMiddleware);
 const { DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD } = process.env
 
 const sequelize = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
-    host: DB_HOST,
+    host: 'ec2-44-209-186-51.compute-1.amazonaws.com',
     dialect: 'postgres',
     logging: false,
 })
