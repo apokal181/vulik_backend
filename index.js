@@ -1,4 +1,5 @@
-import {Sequelize} from "sequelize";
+
+const Sequelize = require('sequelize')
 
 require('dotenv').config()
 const express = require('express')
