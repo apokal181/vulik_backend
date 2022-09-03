@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "null",
+    "password": "null",
+    "database": "my-database",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "text": {
+    "username": null,
+    "password": "null",
+    "database": "my-db-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
