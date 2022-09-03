@@ -31,7 +31,14 @@ const sequelize = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
     host: 'ec2-44-209-186-51.compute-1.amazonaws.com',
     dialect: 'postgres',
     logging: false,
-})
+    ...(process.env.NODE_ENV === 'production' && {
+        dialectOptions: {
+            ssl: {
+                require: true,
+                rejectUnauthorized: false,
+            },
+        },
+})})
 
 const start = async () => {
     try {
